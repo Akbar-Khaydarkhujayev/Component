@@ -74,13 +74,3 @@
     margin-top:20px;
     transform: rotateX(65deg);
 }
-
-.quarter-circle {
-    width: 100px;
-    height: 100px;
-    border-right: 10px dashed black;
-    border-bottom: 10px dashed black;
-    border-radius: 0 0 100px 100px;
-    -moz-border-radius: 0 0 100px 100px;
-    -webkit-border-radius: 0 0 100px 100px;
-}

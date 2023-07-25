@@ -6,6 +6,7 @@ import "./styles/form.css";
 import "./styles/table.css";
 import "./styles/water.css";
 import "./styles/circle.css";
+import "./styles/circle2.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

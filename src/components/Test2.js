@@ -120,8 +120,8 @@ const Test2 = () => {
                     <Circle data="50" text="Title"/>
                     <Circle data="100" text="Title"/>
                     <Circle data="76" text="Title"/>
-                    <Circle2/>
                 </div>
+                <Circle2 percentage={61}/>
             </div>
         </>
     );

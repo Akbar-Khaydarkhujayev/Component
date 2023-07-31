@@ -6,6 +6,7 @@ import "./components/table/table.css";
 import "./components/water/water.css";
 import "./components/circle progress/circle.css";
 import "./components/box progress/circle2.css";
+import "./components/bar chart/bar-chart.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

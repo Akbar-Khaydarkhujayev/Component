@@ -3,6 +3,7 @@ import Table from "../components/table/table";
 import Wave from "../components/water/wave";
 import Circle from "../components/circle progress/circle";
 import Circle2 from "../components/box progress/circle2";
+import BarChart from "../components/bar chart/bar-chart";
 
 function Home() {
 
@@ -80,6 +81,14 @@ function Home() {
     return (
         <>
             <div className="flex">
+                <div className='container flex flex-wrap space-around'>
+                    <BarChart/>
+                </div>
+                <div className='container flex flex-wrap space-around'>
+                    <Circle2 percentage={1}/>
+                </div>
+            </div>
+            <div className="flex">
                 <div className='container'>
                     <div className="flex space-around">
                         <div>
@@ -122,7 +131,9 @@ function Home() {
                     <Circle data="99" text="Title"/>
                     <Circle data="76" text="Title"/>
                 </div>
-                <Circle2 percentage={61}/>
+                <div className='container flex flex-wrap space-around'>
+                    <Circle2 percentage={1}/>
+                </div>
             </div>
         </>
     );

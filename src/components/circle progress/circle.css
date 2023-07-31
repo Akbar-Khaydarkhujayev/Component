@@ -26,22 +26,22 @@
 
 .circle {
     position: absolute;
-    background-color: white;
     width: 150px;
     height: 150px;
     border-radius: 50%;
     background: linear-gradient(180deg, rgba(30,211,243,1) 0%, rgba(30,211,243,1) 50%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 100%);
     transform: rotate(0deg);
     transition: 1s linear;
+    filter: drop-shadow(0px -6px 4px #007fa4);
 }
 
 .circle2 {
     z-index: 2;
     position: absolute;
-    left: 10px;
+    left: 25px;
     top: 25px;
     background-color: #0136A1;
-    width: 110px;
+    width: 100px;
     height: 100px;
     border-radius: 50%;
 }
@@ -49,8 +49,10 @@
 .hide-box {
     z-index: 1;
     position: absolute;
-    width: 150px;
-    height: 75px;
+    left: -10px;
+    width: 170px;
+    height: 80px;
+    top: -5px;
     background-color: #0136A1;
 }
 
@@ -58,7 +60,7 @@
     z-index: 3;
     position: absolute;
     height: 150px;
-    width: 130px;
+    width: 150px;
     font-size: 20px;
     font-weight: bold;
     text-align: center;
@@ -73,4 +75,15 @@
 .rotateX {
     margin-top:20px;
     transform: rotateX(65deg);
+}
+
+.circle-point {
+    position: absolute;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    background-color: #1ED3F3;
+    box-shadow: 0 0 15px #1ED3F3, 0 0 30px #1ED3F3;
+    left: 0;
+    top: 55px;
 }

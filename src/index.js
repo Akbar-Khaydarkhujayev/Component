@@ -2,11 +2,10 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
 import { BrowserRouter } from "react-router-dom";
-import "./styles/form.css";
-import "./styles/table.css";
-import "./styles/water.css";
-import "./styles/circle.css";
-import "./styles/circle2.css";
+import "./components/table/table.css";
+import "./components/water/water.css";
+import "./components/circle progress/circle.css";
+import "./components/box progress/circle2.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

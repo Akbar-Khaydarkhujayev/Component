@@ -40,7 +40,7 @@
     width: 100px;
     height: 100px;
     background-color: transparent;
-    background-image: url("../assets/wave3.png");
+    background-image: url("../../assets/wave3.png");
     background-repeat: repeat-x;
     animation: wave 3s linear infinite;
 }
@@ -50,7 +50,7 @@
     width: 100px;
     height: 100px;
     background-color: transparent;
-    background-image: url("../assets/wave2.png");
+    background-image: url("../../assets/wave2.png");
     background-repeat: repeat-x;
     animation: wave 10s linear infinite;
 }

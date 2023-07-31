@@ -11,11 +11,12 @@ function Circle({data, text}) {
 
     return (
         <div className="position-relative">
-            <div className='circle-text'><span className="circle-percentage"><CountUp  start={0} end={data} /></span><sup>%</sup><br/>{text}
+            <div className='circle-text'>{text}<br/><span className="circle-percentage"><CountUp  start={0} end={data} /></span><sup>%</sup>
             </div>
             <div className="rotateX">
                 <div className="circle"
                      style={{transform: `rotate(-${degree}deg)`}}>
+                    <div className="circle-point"></div>
                 </div>
                 <div className="circle2">
                 </div>

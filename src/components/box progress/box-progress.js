@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Circle2({percentage}) {
+function BoxProgress({percentage}) {
 
     const squareArr = Array.from(Array(100).keys());
 
@@ -23,4 +23,4 @@ function Circle2({percentage}) {
     );
 }
 
-export default Circle2;
+export default BoxProgress;

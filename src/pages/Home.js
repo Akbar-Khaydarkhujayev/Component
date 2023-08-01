@@ -2,8 +2,11 @@ import React, {useState} from 'react';
 import Table from "../components/table/table";
 import Wave from "../components/water/wave";
 import Circle from "../components/circle progress/circle";
-import Circle2 from "../components/box progress/circle2";
+import BoxProgress from "../components/box progress/box-progress";
 import BarChart from "../components/bar chart/bar-chart";
+import RoundChart from "../components/circular chart/round-chart";
+import ShareButton from "../components/share button/share-button";
+import Button from "../components/custom button/button";
 
 function Home() {
 
@@ -81,11 +84,21 @@ function Home() {
     return (
         <>
             <div className="flex">
-                <div className='container flex flex-wrap space-around'>
+                <div className='container2 flex space-around'>
+                    <ShareButton icon="fa-brands fa-facebook" text="Facebook"/>
+                    <ShareButton icon="fa-brands fa-telegram" text="Telegram"/>
+                    <ShareButton icon="fa-brands fa-github" text="Git"/>
+                </div>
+                <div className='container2 flex space-around'>
+                    <Button/>
+                </div>
+            </div>
+            <div className="flex">
+                <div className='container flex space-around'>
                     <BarChart/>
                 </div>
-                <div className='container flex flex-wrap space-around'>
-                    <Circle2 percentage={1}/>
+                <div className='container1 flex space-around'>
+                    <RoundChart data={140}/>
                 </div>
             </div>
             <div className="flex">
@@ -122,7 +135,7 @@ function Home() {
                     </div>
                 </div>
                 <div className='container flex flex-wrap space-around'>
-                    {waveData.map((i) => <Wave percentage={i} text="Title"/>)}
+                    {waveData.map((i) => <Wave key={i} percentage={i} text="Title"/>)}
                 </div>
             </div>
             <div className="flex">
@@ -132,7 +145,7 @@ function Home() {
                     <Circle data="76" text="Title"/>
                 </div>
                 <div className='container flex flex-wrap space-around'>
-                    <Circle2 percentage={1}/>
+                    <BoxProgress percentage={1}/>
                 </div>
             </div>
         </>

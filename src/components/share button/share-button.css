@@ -1,0 +1,90 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.flex {
+    display: flex;
+}
+
+.container2 {
+    margin: 20px;
+    width: 600px;
+    background-color: #0D182A;
+    border: 2px solid #5472ff;
+    -webkit-box-shadow: 0px 0px 6px 0px rgba(255, 255, 255, 0.2) inset;
+    -moz-box-shadow: 0px 0px 6px 0px rgba(255, 255, 255, 0.2) inset;
+    box-shadow: 0px 0px 6px 0px rgba(255, 255, 255, 0.2) inset;
+}
+
+.share-button {
+    position: relative;
+    cursor: pointer;
+    width: 120px;
+    height: 40px;
+    background: #0C2843;
+    display: flex;
+    color: #F4F4F4;
+    border: 2px solid #2C8FC0;
+    box-sizing: content-box;
+}
+
+.share-button-icon {
+    height: 40px;
+    width: 40px;
+    font-size: 26px;
+    line-height: 40px;
+    text-align: center;
+    border: 2px solid #004b81;
+}
+
+.share-button-text {
+    height: 40px;
+    width: 80px;
+    font-weight: bold;
+    line-height: 10px;
+}
+
+.share-on {
+    margin-left: 3px;
+    font-size: 10px;
+    line-height: 22px;
+    text-align: left;
+}
+
+.share-on-text {
+    font-size: 16px;
+    line-height: 2px;
+    text-align: center;
+}
+
+.share-button-corner {
+    height: 1px;
+    width: 16px;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    background: #2C8FC0;
+    clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.share-button-corner1 {
+    height: 1px;
+    width: 14px;
+    position: absolute;
+    right: 0px;
+    bottom: 2px;
+    background: #2C8FC0;
+    clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.share-button-corner2 {
+    height: 1px;
+    width: 10px;
+    position: absolute;
+    right: 0px;
+    bottom: 4px;
+    background: #2C8FC0;
+    clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
+}

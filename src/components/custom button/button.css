@@ -1,0 +1,81 @@
+.button-wrapper {
+    position: relative;
+    width: 200px;
+    height: 50px;
+    background: #0A243D;
+    border: 1px double #0081ff;
+    margin: 10px;
+}
+
+.line {
+    position: absolute;
+    width: 1px !important;
+    background-color: #0081ff;
+    box-shadow: 0 0 5px #1ED3F3, 0 0 10px #1ED3F3;
+}
+
+.line1 {
+    height: 40px;
+    left: -5px;
+    top: 5px;
+}
+
+.line2 {
+    height: 30px;
+    left: -10px;
+    top: 10px;
+}
+
+.line3 {
+    height: 20px;
+    left: -15px;
+    top: 15px;
+}
+
+.line4 {
+    height: 40px;
+    right: -5px;
+    top: 5px;
+}
+
+.line5 {
+    height: 30px;
+    right: -10px;
+    top: 10px;
+}
+
+.line6 {
+    height: 20px;
+    right: -15px;
+    top: 15px;
+}
+
+.button-corner {
+    height: 1px;
+    width: 16px;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    background: #2C8FC0;
+    clip-path: polygon(100% 100%, 0% 100%, 30% 0, 100% 0);
+}
+
+.button-corner1 {
+    height: 1px;
+    width: 14px;
+    position: absolute;
+    left: 0px;
+    bottom: 2px;
+    background: #2C8FC0;
+    clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.button-corner2 {
+    height: 1px;
+    width: 10px;
+    position: absolute;
+    left: 0px;
+    bottom: 4px;
+    background: #2C8FC0;
+    clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
+}

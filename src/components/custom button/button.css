@@ -1,17 +1,20 @@
 .button-wrapper {
+    cursor: pointer;
     position: relative;
     width: 200px;
     height: 50px;
     background: #0A243D;
     border: 1px double #0081ff;
     margin: 10px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .line {
     position: absolute;
     width: 1px !important;
     background-color: #0081ff;
-    box-shadow: 0 0 5px #1ED3F3, 0 0 10px #1ED3F3;
+    transition: .3s;
 }
 
 .line1 {
@@ -51,31 +54,67 @@
 }
 
 .button-corner {
-    height: 1px;
-    width: 16px;
+    height: 2px;
+    width: 30px;
     position: absolute;
     left: 0px;
     bottom: 0px;
     background: #2C8FC0;
-    clip-path: polygon(100% 100%, 0% 100%, 30% 0, 100% 0);
+    clip-path: polygon(0 0, 75% 0, 100% 100%, 0% 100%);
 }
 
 .button-corner1 {
-    height: 1px;
-    width: 14px;
+    height: 2px;
+    width: 26px;
     position: absolute;
     left: 0px;
-    bottom: 2px;
+    bottom: 3px;
     background: #2C8FC0;
-    clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 75% 0, 100% 100%, 0% 100%);
 }
 
 .button-corner2 {
-    height: 1px;
-    width: 10px;
+    height: 2px;
+    width: 22px;
     position: absolute;
     left: 0px;
-    bottom: 4px;
+    bottom: 6px;
     background: #2C8FC0;
-    clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 75% 0, 100% 100%, 0% 100%);
+}
+
+.button-title {
+    line-height: 45px;
+    font-size: 26px;
+    color: white;
+    width: 120px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.button-icon {
+    margin: 5px 10px;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    text-align: center;
+    line-height: 35px;
+    color: white;
+    border-radius: 50%;
+    border: 2px dashed #0081ff;
+    transition: .3s;
+}
+
+.button-wrapper:hover .line{
+    box-shadow: 0 0 5px #1ED3F3, 0 0 10px #1ED3F3;
+}
+
+.button-wrapper:hover{
+    -webkit-box-shadow: 0px 0px 8px 5px rgba(30, 211, 243, 0.2);
+    -moz-box-shadow: 0px 0px 8px 5px rgba(30, 211, 243, 0.2);
+    box-shadow: 0px 0px 8px 5px rgba(30, 211, 243, 0.2);
+}
+
+.button-wrapper:hover .button-icon{
+    box-shadow: 0 0 2px #1ED3F3, 0 0 5px #1ED3F3;
 }

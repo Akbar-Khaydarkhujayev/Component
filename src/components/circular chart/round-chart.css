@@ -19,6 +19,8 @@
 }
 
 .round {
+    top: 10px;
+    left: 10px;
     position: relative;
     width: 150px;
     height: 150px;
@@ -26,9 +28,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    transform: rotate(220deg);
-    background: conic-gradient(#22D8E3 0deg, transparent 0deg);
-    transition: 1s;
+    transform: rotate(230deg);
 }
 
 .round::after {
@@ -46,16 +46,40 @@
     font-size: 26px;
     font-weight: bold;
     color: #22D8E3;
-    line-height: 150px;
-    width: 150px;
+    line-height: 170px;
+    width: 170px;
     text-align: center;
 }
 
 .round-parent {
+    z-index: 2;
     position: relative;
     margin: 30px 0;
+    width: 170px;
+    height: 170px;
+    box-shadow: 0px 0px 15px 3px rgba(34,216,227,0.75) inset;
+    -webkit-box-shadow: 0px 0px 15px 3px rgba(34,216,227,0.75) inset;
+    -moz-box-shadow: 0px 0px 15px 3px rgba(34,216,227,0.75) inset;
+    border-radius: 100%;
 }
 
-.qwer {
-    background: conic-gradient(#22D8E3 140deg, transparent 140deg);
+.round-underlay {
+    position: absolute;
+    width: 50px;
+    height: 60px;
+    background: #0136A1;
+    border: 2px solid #1ED3F3;
+    border-radius: 5px;
+    bottom: 5px;
+    left: 60px;
+    transform: rotateX(70deg);
+    filter: drop-shadow(0 12px 0 #1ED3F3);
+}
+
+.round-img {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    bottom: 25px;
+    left: 70px;
 }

@@ -99,9 +99,9 @@ function Home() {
                     <BarChart/>
                 </div>
                 <div className='container1 flex space-around'>
-                    <RoundChart data={140}/>
-                    <RoundChart data={260}/>
-                    <RoundChart data={50}/>
+                    <RoundChart data={140} image='https://cdn-icons-png.flaticon.com/512/6015/6015853.png'/>
+                    <RoundChart data={260} image='https://cdn-icons-png.flaticon.com/512/6638/6638032.png'/>
+                    <RoundChart data={50} image='https://cdn-icons-png.flaticon.com/512/3124/3124850.png'/>
                 </div>
             </div>
             <div className="flex">

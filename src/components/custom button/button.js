@@ -1,10 +1,10 @@
 import React from 'react';
 
-function Button(props) {
+function Button({text, icon}) {
     return (
         <div className="button-wrapper">
-            <div className="button-title">Menu</div>
-            <div className="button-icon"><i className="fa-solid fa-house button-icon1"></i></div>
+            <div className="button-title">{text}</div>
+            <div className="button-icon"><i className={icon}></i></div>
             <div className="line line1"></div>
             <div className="line line2"></div>
             <div className="line line3"></div>

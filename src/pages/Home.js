@@ -90,7 +90,8 @@ function Home() {
                     <ShareButton icon="fa-brands fa-github" text="Git"/>
                 </div>
                 <div className='container2 flex space-around'>
-                    <Button/>
+                    <Button icon="fa-solid fa-house button-icon1" text="Home"/>
+                    <Button icon="fa-solid fa-camera button-icon1" text="Cameras"/>
                 </div>
             </div>
             <div className="flex">
@@ -99,6 +100,8 @@ function Home() {
                 </div>
                 <div className='container1 flex space-around'>
                     <RoundChart data={140}/>
+                    <RoundChart data={260}/>
+                    <RoundChart data={50}/>
                 </div>
             </div>
             <div className="flex">

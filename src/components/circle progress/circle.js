@@ -10,7 +10,7 @@ function Circle({data, text}) {
     }, []);
 
     return (
-        <div className="position-relative">
+        <div className="position-relative" style={{width: "150px", height: "150px"}}>
             <div className='circle-text'>{text}<br/><span className="circle-percentage"><CountUp  start={0} end={data} /></span><sup>%</sup>
             </div>
             <div className="rotateX">

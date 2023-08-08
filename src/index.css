@@ -39,6 +39,10 @@ code {
     position: relative;
 }
 
+.position-absolute {
+    position: absolute;
+}
+
 .container {
     margin: 20px;
     width: 600px;
@@ -63,6 +67,12 @@ code {
     margin: 20px;
     width: 600px;
     background-color: #0136A1;
+}
+
+.container3 {
+    margin: 20px;
+    width: 600px;
+    background-color: #fff;
 }
 
 /*BAR CHART*/
@@ -810,4 +820,305 @@ code {
 
 .hexagon-text {
     font-size: 11px;
+}
+
+/*CALENDAR*/
+
+.calendarWrap {
+    color: #87CEEB;
+    background-color: #03156B;
+    height: 400px;
+    width: fit-content;
+}
+
+.inputBox {
+    cursor: pointer;
+    width: 100px;
+    text-align: center;
+    color: white;
+    margin: 0 15px;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid white;
+}
+
+.openInputBox {
+    border-bottom: 2px solid #1ED3F3;
+}
+
+.calendarElement {
+    border-radius: 8px;
+}
+
+.rdrCalendarWrapper {
+    background-color: transparent;
+}
+
+.rdrDayPassive .rdrDayNumber span {
+    color: #87CEEB;
+    font-weight: bold;
+}
+
+.rdrDayNumber span {
+    font-weight: bold;
+    color: #CCCCCC;
+}
+
+.rdrWeekDay {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.rdrMonthAndYearWrapper {
+    border-radius: 20px;
+    background-color: #ffffff;
+    height: 40px;
+    padding-top: 0;
+ }
+
+.rdrMonthAndYearPickers select {
+    background-color: #ffffff;
+}
+
+select::-webkit-scrollbar {
+    width: 7px;
+}
+
+select::-webkit-scrollbar-thumb {
+    background: #1ED3F3;
+    border-radius: 5px;
+}
+
+/*WIDGET*/
+
+.widget-parent {
+    width: 150px;
+    height: 50px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-around;
+}
+
+.rhombus-parent {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.rhombus {
+    border: 3px solid #87CEEB;
+    width: 35px;
+    height: 35px;
+    background: linear-gradient(-45deg, rgba(3,21,107,1) 0%, rgba(0,181,255,1) 250%);
+    transform: rotate(45deg);
+}
+
+.widget-desc {
+    color: white;
+    padding: 5px 0;
+    text-align: center;
+    width: 100px;
+    height: 50px;
+}
+
+.widget-text {
+    color: #87CEEB;
+    font-size: 14px;
+    line-height: 10px;
+}
+
+.widget-num {
+    font-size: 24px;
+    line-height: 25px;
+}
+
+.widget-icon {
+    position: absolute;
+    color: white;
+    font-size: 14px;
+}
+
+/*             WIDGET 2               */
+
+@import url('https://fonts.cdnfonts.com/css/ds-digital');
+
+.widget1 {
+    display: flex;
+    margin: 0 20px;
+}
+
+.widget1-child {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #1ED3F3;
+    -webkit-box-shadow: 0px 0px 10px 5px rgba(30, 211, 243, 0.3%) inset;
+    -moz-box-shadow: 0px 0px 10px 5px rgba(30, 211, 243, 0.3) inset;
+    box-shadow: 0px 0px 10px 5px rgba(30, 211, 243, 0.3) inset;
+    line-height: 40px;
+    text-align: center;
+    font-size: 36px;
+    font-weight: 600;
+    color: #1ED3F3;
+    font-family: 'DS-Digital', sans-serif;
+}
+
+.widget1-icon {
+    font-size: 20px;
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    color: #1ED3F3;
+    background-color: rgb(3, 21, 107);
+    -webkit-box-shadow: 0px 0px 10px 5px rgba(30, 211, 243, 0.3%) inset;
+    -moz-box-shadow: 0px 0px 10px 5px rgba(30, 211, 243, 0.3) inset;
+    box-shadow: 0px 0px 10px 5px rgba(30, 211, 243, 0.3) inset;
+}
+
+.widget1-border-anim {
+    padding: 2px;
+    background: linear-gradient(45deg, rgba(30,211,243,1) 0%, rgba(255,255,255,1) 25%, rgba(30,211,243,1) 50%, rgba(255,255,255,1) 75%, rgba(30,211,243,1) 100%);
+    animation: spin 1.2s linear infinite;
+}
+
+@keyframes spin{
+    from{background-position: center}
+    to{background-position: 40px;}
+}
+
+
+
+/*WIDGET 2*/
+
+.widget2-parent {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='100' ry='100' stroke='%231ED3F3FF' stroke-width='3' stroke-dasharray='60%2c 18' stroke-dashoffset='68' stroke-linecap='square'/%3e%3c/svg%3e");
+    margin: 0 10px;
+}
+
+.arrow {
+    position: absolute;
+    background-color: #1ED3F3;
+    width: 10px;
+    height: 5px;
+    clip-path: polygon(50% 0, 0% 100%, 100% 100%);
+}
+
+.arrow-top {
+    top: -2px;
+    left: 45px;
+    transform: rotate(180deg);
+}
+
+.arrow-bottom {
+    bottom: -2px;
+    left: 45px;
+}
+
+.arrow-left {
+    top: 48px;
+    left: -5px;
+    transform: rotate(90deg);
+}
+
+.arrow-right {
+    top: 48px;
+    right: -5px;
+    transform: rotate(-90deg);
+}
+
+.widget2-data {
+    width: 100%;
+    height: 100%;
+    color: white;
+    font-weight: 600;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: radial-gradient(circle, rgba(0,181,255,0.7) 0%, rgba(3,21,107,0) 70%);
+    border-radius: 50%;
+}
+
+/*WIDGET 3*/
+
+.widget3-parent {
+    margin: 100px;
+}
+
+.widget3-circle {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 1px solid #1ED3F3;
+    box-shadow: 0 0 0px #1ED3F3, 0 0 10px #1ED3F3;
+    transition: 1s;
+}
+
+.widget3-child {
+    cursor: pointer;
+    position: absolute;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    border: 1px solid #1ED3F3;
+    box-shadow: 0 0 0px #1ED3F3, 0 0 10px #1ED3F3;
+    background-color: #03156B;
+}
+
+.widget3-child1 {
+    bottom: 120px;
+    right: 120px;
+}
+
+.widget3-child2 {
+    bottom: 120px;
+    left: 120px;
+}
+
+.widget3-child3 {
+    top: 120px;
+    right: 120px;
+}
+
+.widget3-child4 {
+    top: 120px;
+    left: 120px;
+}
+
+.main-child {
+    border: 3px solid #1ED3F3;
+    width: 100px;
+    height: 100px;
+}
+
+.widget3-icon {
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+    color: white;
+    font-size: 36px;
+    line-height: 200px;
+    text-align: center;
+}
+
+.widget3-text {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: white;
+    padding: 20% 0;
+}
+
+.widget3-no-rotate {
+    transform: rotate(-45deg);
+    transition: 1s;
 }

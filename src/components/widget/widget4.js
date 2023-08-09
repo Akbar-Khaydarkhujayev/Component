@@ -1,11 +1,11 @@
 import React, {useEffect, useRef, useState, createRef} from 'react';
 
-function Widget3({data}) {
+function Widget4({data}) {
 
     let refs = useRef([]);
     refs.current = data.map((element, i) => refs.current[i] ?? createRef());
     let circleRef = useRef(null);
-    let iconRef = useRef(null);
+    let numRef = useRef(null);
 
     const [main, setMain] = useState(0);
 
@@ -17,7 +17,7 @@ function Widget3({data}) {
     useEffect(() => {
         circleRef.current.style.transform = `rotate(${main*90+45}deg)`;
         refs.current.forEach((i) => i.current.style.transform = `rotate(-${main*90+45}deg)`);
-        iconRef.current.style.transform = `rotate(-${main*90+45}deg)`;
+        numRef.current.style.transform = `rotate(-${main*90+45}deg)`;
     }, [main])
 
     return (
@@ -25,17 +25,16 @@ function Widget3({data}) {
             <div className='widget3-circle' ref={circleRef}>
                 {data.map((element, i) =>
                     <div key={i}
-                         className={main === i ? `widget3-child main-child widget3-child${element.id}` : `widget3-child widget3-child${element.id}`}
+                         className={main === i? `widget3-child main-child widget3-child${element.id}` : `widget3-child widget3-child${element.id}`}
                          onClick={() => childClick(i)}>
-                        <div className={main === i ? "widget3-text widget3-main-text" : "widget3-text"} ref={refs.current[i]}>
-                            <p>{element.time}</p>
-                            <p>{element.amount}</p>
+                        <div className="widget3-text" ref={refs.current[i]}>
+                            <i className={`widget4-icon ${element.icon}`}></i>
                         </div>
                     </div>)}
-                <i className="fa-solid fa-bicycle widget3-icon" ref={iconRef}></i>
+                <p className="widget4-num" ref={numRef}>{data[main].amount}</p>
             </div>
         </div>
     );
 }
 
-export default Widget3;
+export default Widget4;

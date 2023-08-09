@@ -12,7 +12,6 @@ function Widget({icon, number, text}) {
                 <div className="widget-text">{text}</div>
                 <div className="widget-num">{number}</div>
             </div>
-
         </div>
     );
 }

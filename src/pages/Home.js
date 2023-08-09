@@ -101,6 +101,24 @@ function Home() {
         amount: 600,
     }];
 
+    const widget4_data = [{
+        id: 1,
+        icon: "fa-solid fa-car",
+        amount: 300,
+    }, {
+        id: 2,
+        icon: "fa-solid fa-video",
+        amount: 400,
+    }, {
+        id: 3,
+        icon: "fa-solid fa-person",
+        amount: 500,
+    }, {
+        id: 4,
+        icon: "fa-solid fa-person-dress",
+        amount: 600,
+    }];
+
     const waveData = [50, 10, 80, 30, 75, 100, 86, 25];
 
     function handleChoose(i) {
@@ -111,7 +129,7 @@ function Home() {
         <>
             <div className="flex" style={{backgroundColor: "#03156B", padding: "20px"}}>
                 <Widget3 data={widget3_data}/>
-                <Widget4 data={widget3_data}/>
+                <Widget4 data={widget4_data}/>
             </div>
             <div className="flex" style={{backgroundColor: "#03156B", padding: "20px"}}>
                 <Widget2 text="Number" number={500}/>

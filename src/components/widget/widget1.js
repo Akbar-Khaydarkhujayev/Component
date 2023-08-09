@@ -10,7 +10,7 @@ function Widget1({number, icon}) {
                 <div className="widget1-icon"><i className={icon}></i></div>
             </div>
 
-            {arrayOfDigits.map((item) => <div className="widget1-child">{item}</div>)}
+            {arrayOfDigits.map((item, i) => <div key={i} className="widget1-child">{item}</div>)}
         </div>
     );
 }

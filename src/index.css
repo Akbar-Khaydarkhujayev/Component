@@ -892,6 +892,12 @@ select::-webkit-scrollbar-thumb {
 
 /*WIDGET*/
 
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: true;
+}
+
 .widget-parent {
     width: 150px;
     height: 50px;
@@ -910,11 +916,19 @@ select::-webkit-scrollbar-thumb {
 }
 
 .rhombus {
-    border: 3px solid #87CEEB;
+    border: 3px solid ;
+    border-image: linear-gradient(var(--angle), #87CEEB, rgba(0,181,255,1)) 1;
     width: 35px;
     height: 35px;
-    background: linear-gradient(-45deg, rgba(3,21,107,1) 0%, rgba(0,181,255,1) 250%);
+    background: linear-gradient(var(--angle), rgba(3,21,107,1) 0%, rgba(0,181,255,1) 250%);
     transform: rotate(45deg);
+    animation: widget-rotate 2s linear infinite;
+}
+
+@keyframes widget-rotate {
+    100% {
+        --angle: 359deg;
+    }
 }
 
 .widget-desc {
@@ -945,6 +959,12 @@ select::-webkit-scrollbar-thumb {
 /*             WIDGET 2               */
 
 @import url('https://fonts.cdnfonts.com/css/ds-digital');
+
+@property --degree {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: true;
+}
 
 .widget1 {
     display: flex;
@@ -980,17 +1000,18 @@ select::-webkit-scrollbar-thumb {
 }
 
 .widget1-border-anim {
+    width: 40px;
+    height: 40px;
     padding: 2px;
-    background: linear-gradient(45deg, rgba(30,211,243,1) 0%, rgba(255,255,255,1) 25%, rgba(30,211,243,1) 50%, rgba(255,255,255,1) 75%, rgba(30,211,243,1) 100%);
-    animation: spin 1.2s linear infinite;
+    background-image: conic-gradient(from var(--degree) at 50% 50%, rgb(3, 21, 107) 0%, #1ED3F3 100%);
+    animation: backgroundRotate 3s linear infinite;
 }
 
-@keyframes spin{
-    from{background-position: center}
-    to{background-position: 40px;}
+@keyframes backgroundRotate {
+    100% {
+        --degree: 359deg;
+    }
 }
-
-
 
 /*WIDGET 2*/
 
@@ -1080,17 +1101,17 @@ select::-webkit-scrollbar-thumb {
 }
 
 .widget3-child2 {
-    bottom: 120px;
-    left: 120px;
-}
-
-.widget3-child3 {
     top: 120px;
     right: 120px;
 }
 
-.widget3-child4 {
+.widget3-child3 {
     top: 120px;
+    left: 120px;
+}
+
+.widget3-child4 {
+    bottom: 120px;
     left: 120px;
 }
 
@@ -1108,6 +1129,8 @@ select::-webkit-scrollbar-thumb {
     font-size: 36px;
     line-height: 200px;
     text-align: center;
+    transform: rotate(-45deg);
+    transition: 1s;
 }
 
 .widget3-text {
@@ -1116,9 +1139,6 @@ select::-webkit-scrollbar-thumb {
     text-align: center;
     color: white;
     padding: 20% 0;
-}
-
-.widget3-no-rotate {
     transform: rotate(-45deg);
     transition: 1s;
 }

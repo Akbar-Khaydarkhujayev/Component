@@ -1,10 +1,13 @@
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useEffect, useRef, useState, createRef} from 'react';
 
-function Widget4({data}) {
+function Widget3({data}) {
 
-    const circleRef = useRef(null);
+    let refs = useRef([]);
+    refs.current = data.map((element, i) => refs.current[i] ?? createRef());
+    let circleRef = useRef(null);
+    let iconRef = useRef(null);
 
-    const [main, setMain] = useState(1);
+    const [main, setMain] = useState(0);
 
     function childClick(n) {
         setMain(n);
@@ -12,38 +15,27 @@ function Widget4({data}) {
 
 
     useEffect(() => {
-        let noRotate = document.getElementsByClassName("widget3-no-rotate");
-
-        if (main === 1) {
-            circleRef.current.style.transform = "rotate(45deg)";
-            Array.from(noRotate).forEach((i) => i.style.transform = "rotate(-45deg)");
-        } else if (main === 2) {
-            circleRef.current.style.transform = "rotate(315deg)"
-            Array.from(noRotate).forEach((i) => i.style.transform = "rotate(-315deg)");
-        } else if (main === 3) {
-            circleRef.current.style.transform = "rotate(135deg)"
-            Array.from(noRotate).forEach((i) => i.style.transform = "rotate(-135deg)");
-        } else if (main === 4) {
-            circleRef.current.style.transform = "rotate(225deg)"
-            Array.from(noRotate).forEach((i) => i.style.transform = "rotate(-225deg)");
-        }
+        circleRef.current.style.transform = `rotate(${main*90+45}deg)`;
+        refs.current.forEach((i) => i.current.style.transform = `rotate(-${main*90+45}deg)`);
+        iconRef.current.style.transform = `rotate(-${main*90+45}deg)`;
     }, [main])
 
     return (
         <div className="widget3-parent">
             <div className='widget3-circle' ref={circleRef}>
-                {data.map((i) =>
-                    <div key={i.id} className={main === i.id ? `widget3-child main-child widget3-child${i.id}` : `widget3-child widget3-child${i.id}`}
-                         onClick={() => childClick(i.id)}>
-                        <div className="widget3-text widget3-no-rotate">
-                            <p>{i.time}</p>
-                            <p>{i.amount}</p>
+                {data.map((element, i) =>
+                    <div key={i}
+                         className={main === i ? `widget3-child main-child widget3-child${element.id}` : `widget3-child widget3-child${element.id}`}
+                         onClick={() => childClick(i)}>
+                        <div className={main === i ? "widget3-text widget3-main-text" : "widget3-text"} ref={refs.current[i]}>
+                            <p>{element.time}</p>
+                            <p>{element.amount}</p>
                         </div>
                     </div>)}
-                <i className="fa-solid fa-bicycle widget3-icon widget3-no-rotate"></i>
+                <i className="fa-solid fa-bicycle widget3-icon" ref={iconRef}></i>
             </div>
         </div>
     );
 }
 
-export default Widget4;
+export default Widget3;
